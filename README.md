@@ -1,15 +1,21 @@
 # Research Track - Assignment 1
 ##### Submitted by Muhammad Ali Haider Dar (S5046263)
 
-The assignment requires controlling a holonomic robot in a 2d space with a simple 2d simulator, Stage. 
+The assignment requires controlling a holonomic robot in a 2D space with a simple 2D simulator, Stage.
 
 ## Description of Packages
+
+### Simulator: _stage_ros_
+
+This package is used to launch the 2D simulator. Further documentation about the package can be read [_here_](http://wiki.ros.org/stage_ros).
 
 ### Controller: _assignment1_pkg_
 
 
 
 ### Server: _assignment1_srv_
+
+
 
 ## Instructions for Running the Project
 
@@ -63,3 +69,7 @@ rostopic echo /assignment1/position
 ```
 rosrun rqt_graph rqt_graph
 ```
+
+## Documentation
+
+The documentation for the project can be found in HTML format inside _docs_ folder. Doxygen tool was used for the documentation of C++ files.
