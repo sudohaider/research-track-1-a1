@@ -1,7 +1,15 @@
 # Research Track - Assignment 1
 ##### Submitted by Muhammad Ali Haider Dar (S5046263)
 
-Brief description goes here.
+The assignment requires controlling a holonomic robot in a 2d space with a simple 2d simulator, Stage. 
+
+## Description of Packages
+
+### Controller: _assignment1_pkg_
+
+
+
+### Server: _assignment1_srv_
 
 ## Instructions for Running the Project
 
