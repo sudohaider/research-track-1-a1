@@ -13,7 +13,7 @@ This package is used to launch the 2D simulator. Further documentation about the
 
 The controller package _assignment1_pkg_ contains the C++ file **controller.cpp** which contains the source code for controlling the robot. The functionality is called through the node _assignment1_node_.
 
-Position callback function is implemented for subscribing to the topic `/odom` from nav_msgs/Odometry. The function initializes and calls service to acquire values of new position of robot. The destination is reached when the distance between the current position and destination is less than 0.1, and the function requests for new positions. The linear velocities are published on topic _cmd_vel_ according to the formula vel_x = k* (new_x - current_x), where k = 1 in this case. A message is published on topic _assignment1/position_ containing the name of message, x, y, new_x and new_y coordinates.
+Position callback function is implemented for subscribing to the topic `/odom` from nav_msgs/Odometry. The function initializes and calls service to acquire values of new position of robot. The destination is reached when the distance between the current position and destination is less than 0.1, and the function requests for new positions. The linear velocities are published on topic _cmd_vel_ according to the formula **vel_x = k (new_x - current_x)**, where k = 1 in this case. A message is published on topic _assignment1/position_ containing the name of message, _x_, _y_, _new_x_ and _new_y_ coordinates.
 
 ### Server: _assignment1_srv_
 
@@ -27,7 +27,7 @@ The following steps will help prepare the necessary environment and dependencies
 
 1. Start the ROS master node using `roscore &` in the command line. The `&` argument makes the command line available after initialization of master node.
 
-2. Navigate to the the local workspace repository using `cd /workspace/` command.
+2. Navigate to the the local workspace repository using `cd /$name_of_workspace$/` command.
 
 3. Clone the remote repository of assignment in your local repository/workspace using the command:
 ```
@@ -71,6 +71,7 @@ rostopic echo /assignment1/position
 ```
 rosrun rqt_graph rqt_graph
 ```
+The computational graph of the system _rosgraph.png_ can be found in the main repository.
 
 ## Documentation
 
