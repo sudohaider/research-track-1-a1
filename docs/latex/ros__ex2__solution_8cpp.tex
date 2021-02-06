@@ -1,0 +1,61 @@
+\hypertarget{ros__ex2__solution_8cpp}{}\section{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/ros\+\_\+ex2\+\_\+solution.cpp File Reference}
+\label{ros__ex2__solution_8cpp}\index{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/ros\+\_\+ex2\+\_\+solution.\+cpp@{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/ros\+\_\+ex2\+\_\+solution.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Pose.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Kill.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Spawn.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}std\+\_\+srvs/\+Empty.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Teleport\+Absolute.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}my\+\_\+srv/\+Harmonic.\+h\char`\"{}}\\*
+Include dependency graph for ros\+\_\+ex2\+\_\+solution.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ros__ex2__solution_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ros__ex2__solution_8cpp_a6eb129420e9c9062148a717815e29648}{subscriber\+Callback} (const turtlesim\+::\+Pose\+::\+Const\+Ptr \&pose\+\_\+msg)
+\item 
+int \hyperlink{ros__ex2__solution_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{ros__ex2__solution_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}{chatter\+\_\+pub}
+\item 
+ros\+::\+Service\+Client \hyperlink{ros__ex2__solution_8cpp_a5136dbc35257b57265298b7868d8b119}{client5}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}!main@{main}}
+\index{main@{main}!ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{ros__ex2__solution_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{ros__ex2__solution_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}!subscriber\+Callback@{subscriber\+Callback}}
+\index{subscriber\+Callback@{subscriber\+Callback}!ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}}
+\subsubsection[{\texorpdfstring{subscriber\+Callback(const turtlesim\+::\+Pose\+::\+Const\+Ptr \&pose\+\_\+msg)}{subscriberCallback(const turtlesim::Pose::ConstPtr &pose_msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void subscriber\+Callback (
+\begin{DoxyParamCaption}
+\item[{const turtlesim\+::\+Pose\+::\+Const\+Ptr \&}]{pose\+\_\+msg}
+\end{DoxyParamCaption}
+)}\hypertarget{ros__ex2__solution_8cpp_a6eb129420e9c9062148a717815e29648}{}\label{ros__ex2__solution_8cpp_a6eb129420e9c9062148a717815e29648}
+
+
+\subsection{Variable Documentation}
+\index{ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}!chatter\+\_\+pub@{chatter\+\_\+pub}}
+\index{chatter\+\_\+pub@{chatter\+\_\+pub}!ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}}
+\subsubsection[{\texorpdfstring{chatter\+\_\+pub}{chatter_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher chatter\+\_\+pub}\hypertarget{ros__ex2__solution_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}{}\label{ros__ex2__solution_8cpp_ac050ecd28d14458e8d356e5f6d38a25b}
+\index{ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}!client5@{client5}}
+\index{client5@{client5}!ros\+\_\+ex2\+\_\+solution.\+cpp@{ros\+\_\+ex2\+\_\+solution.\+cpp}}
+\subsubsection[{\texorpdfstring{client5}{client5}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Client client5}\hypertarget{ros__ex2__solution_8cpp_a5136dbc35257b57265298b7868d8b119}{}\label{ros__ex2__solution_8cpp_a5136dbc35257b57265298b7868d8b119}

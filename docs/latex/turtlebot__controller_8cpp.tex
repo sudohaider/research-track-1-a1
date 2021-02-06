@@ -1,0 +1,67 @@
+\hypertarget{turtlebot__controller_8cpp}{}\section{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/turtlebot\+\_\+controller.cpp File Reference}
+\label{turtlebot__controller_8cpp}\index{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/turtlebot\+\_\+controller.\+cpp@{my\+\_\+ros\+\_\+ws/src/turtlebot\+\_\+controller/src/turtlebot\+\_\+controller.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Pose.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlesim/\+Spawn.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}turtlebot\+\_\+controller/\+Vel.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}my\+\_\+srv/\+Velocity.\+h\char`\"{}}\\*
+Include dependency graph for turtlebot\+\_\+controller.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{turtlebot__controller_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{turtlebot__controller_8cpp_a33fd3a7cdf8f60560e8ef55d0a05e2bd}{position\+Callback} (const turtlesim\+::\+Pose\+::\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{turtlebot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{turtlebot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\item 
+ros\+::\+Publisher \hyperlink{turtlebot__controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}{pub2}
+\item 
+ros\+::\+Service\+Client \hyperlink{turtlebot__controller_8cpp_ad5f18e67eb52639d4c703b1eef63aded}{client2}
+\item 
+int \hyperlink{turtlebot__controller_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!main@{main}}
+\index{main@{main}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{turtlebot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{turtlebot__controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!position\+Callback@{position\+Callback}}
+\index{position\+Callback@{position\+Callback}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{position\+Callback(const turtlesim\+::\+Pose\+::\+Const\+Ptr \&msg)}{positionCallback(const turtlesim::Pose::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void position\+Callback (
+\begin{DoxyParamCaption}
+\item[{const turtlesim\+::\+Pose\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{turtlebot__controller_8cpp_a33fd3a7cdf8f60560e8ef55d0a05e2bd}{}\label{turtlebot__controller_8cpp_a33fd3a7cdf8f60560e8ef55d0a05e2bd}
+
+
+\subsection{Variable Documentation}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!client2@{client2}}
+\index{client2@{client2}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{client2}{client2}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Client client2}\hypertarget{turtlebot__controller_8cpp_ad5f18e67eb52639d4c703b1eef63aded}{}\label{turtlebot__controller_8cpp_ad5f18e67eb52639d4c703b1eef63aded}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!count@{count}}
+\index{count@{count}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{count}{count}}]{\setlength{\rightskip}{0pt plus 5cm}int count = 10}\hypertarget{turtlebot__controller_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{}\label{turtlebot__controller_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!pub@{pub}}
+\index{pub@{pub}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub}\hypertarget{turtlebot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{turtlebot__controller_8cpp_a350594df3e8f6948c8462edfd41ce086}
+\index{turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}!pub2@{pub2}}
+\index{pub2@{pub2}!turtlebot\+\_\+controller.\+cpp@{turtlebot\+\_\+controller.\+cpp}}
+\subsubsection[{\texorpdfstring{pub2}{pub2}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub2}\hypertarget{turtlebot__controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}{}\label{turtlebot__controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}

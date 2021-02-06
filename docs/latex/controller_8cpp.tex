@@ -1,0 +1,102 @@
+\hypertarget{controller_8cpp}{}\section{my\+\_\+ros\+\_\+ws/src/assignment1\+\_\+pkg/src/controller.cpp File Reference}
+\label{controller_8cpp}\index{my\+\_\+ros\+\_\+ws/src/assignment1\+\_\+pkg/src/controller.\+cpp@{my\+\_\+ros\+\_\+ws/src/assignment1\+\_\+pkg/src/controller.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Twist.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Odometry.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}assignment1\+\_\+pkg/\+Position.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}assignment1\+\_\+srv/\+New\+Position.\+h\char`\"{}}\\*
+Include dependency graph for controller.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controller_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{controller_8cpp_af8722c0192c2077a3593268bb06b0572}{distance\+Formula} (float x, float y, float new\+\_\+x, float new\+\_\+y)
+\item 
+void \hyperlink{controller_8cpp_aab6e381bffc34921244a29ec0538ba64}{position\+Callback} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{controller_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\begin{DoxyCompactList}\small\item\em Initializing publisher for linear x and y velocities. \end{DoxyCompactList}\item 
+ros\+::\+Publisher \hyperlink{controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}{pub2}
+\begin{DoxyCompactList}\small\item\em Initializing publisher for current and new positions of x and y. \end{DoxyCompactList}\item 
+ros\+::\+Service\+Client \hyperlink{controller_8cpp_a17bcd065930a8a7f9f194078d9977268}{client}
+\begin{DoxyCompactList}\small\item\em initializing service client \end{DoxyCompactList}\item 
+float \hyperlink{controller_8cpp_a4ddbbd73ef1c0b42cb961ff5b8ed2ac4}{newpos\+\_\+x}
+\begin{DoxyCompactList}\small\item\em Initializing float variable for storing new values of position x. \end{DoxyCompactList}\item 
+float \hyperlink{controller_8cpp_afc28ea87a6504a3f02cf52eb048a5ae1}{newpos\+\_\+y}
+\begin{DoxyCompactList}\small\item\em Initializing float variable for storing new values of position y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{controller.\+cpp@{controller.\+cpp}!distance\+Formula@{distance\+Formula}}
+\index{distance\+Formula@{distance\+Formula}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{distance\+Formula(float x, float y, float new\+\_\+x, float new\+\_\+y)}{distanceFormula(float x, float y, float new_x, float new_y)}}]{\setlength{\rightskip}{0pt plus 5cm}float distance\+Formula (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{new\+\_\+x, }
+\item[{float}]{new\+\_\+y}
+\end{DoxyParamCaption}
+)}\hypertarget{controller_8cpp_af8722c0192c2077a3593268bb06b0572}{}\label{controller_8cpp_af8722c0192c2077a3593268bb06b0572}
+Determining distance from current position (x,y) to new position (new\+\_\+x,new\+\_\+y) \index{controller.\+cpp@{controller.\+cpp}!main@{main}}
+\index{main@{main}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{controller_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+main function to initialize service and node, and advertise on topics. \index{controller.\+cpp@{controller.\+cpp}!position\+Callback@{position\+Callback}}
+\index{position\+Callback@{position\+Callback}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{position\+Callback(const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)}{positionCallback(const nav_msgs::Odometry::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void position\+Callback (
+\begin{DoxyParamCaption}
+\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{controller_8cpp_aab6e381bffc34921244a29ec0538ba64}{}\label{controller_8cpp_aab6e381bffc34921244a29ec0538ba64}
+Callback function for subscribing to topic /odom. Initializes and calls service to acquire values of new position within specified range, requests for new positions when robot reaches the destination, or sets the values of linear x and y velocities, and publishes message with values of x, y, new\+\_\+x, new\+\_\+y. 
+
+\subsection{Variable Documentation}
+\index{controller.\+cpp@{controller.\+cpp}!client@{client}}
+\index{client@{client}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{client}{client}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Service\+Client client}\hypertarget{controller_8cpp_a17bcd065930a8a7f9f194078d9977268}{}\label{controller_8cpp_a17bcd065930a8a7f9f194078d9977268}
+
+
+initializing service client 
+
+\index{controller.\+cpp@{controller.\+cpp}!newpos\+\_\+x@{newpos\+\_\+x}}
+\index{newpos\+\_\+x@{newpos\+\_\+x}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{newpos\+\_\+x}{newpos_x}}]{\setlength{\rightskip}{0pt plus 5cm}float newpos\+\_\+x}\hypertarget{controller_8cpp_a4ddbbd73ef1c0b42cb961ff5b8ed2ac4}{}\label{controller_8cpp_a4ddbbd73ef1c0b42cb961ff5b8ed2ac4}
+
+
+Initializing float variable for storing new values of position x. 
+
+\index{controller.\+cpp@{controller.\+cpp}!newpos\+\_\+y@{newpos\+\_\+y}}
+\index{newpos\+\_\+y@{newpos\+\_\+y}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{newpos\+\_\+y}{newpos_y}}]{\setlength{\rightskip}{0pt plus 5cm}float newpos\+\_\+y}\hypertarget{controller_8cpp_afc28ea87a6504a3f02cf52eb048a5ae1}{}\label{controller_8cpp_afc28ea87a6504a3f02cf52eb048a5ae1}
+
+
+Initializing float variable for storing new values of position y. 
+
+\index{controller.\+cpp@{controller.\+cpp}!pub@{pub}}
+\index{pub@{pub}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub}\hypertarget{controller_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{controller_8cpp_a350594df3e8f6948c8462edfd41ce086}
+
+
+Initializing publisher for linear x and y velocities. 
+
+\index{controller.\+cpp@{controller.\+cpp}!pub2@{pub2}}
+\index{pub2@{pub2}!controller.\+cpp@{controller.\+cpp}}
+\subsubsection[{\texorpdfstring{pub2}{pub2}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub2}\hypertarget{controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}{}\label{controller_8cpp_a2bef9e72d62d7ea1be803444f1ca7a6b}
+
+
+Initializing publisher for current and new positions of x and y. 
+
