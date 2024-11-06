@@ -31,7 +31,7 @@ The following steps will help prepare the necessary environment and dependencies
 
 3. Clone the remote repository of assignment in your local repository/workspace using the command:
 ```
-git clone https://github.com/alihaidersays/ResearchTrack_Assignment1.git
+git clone https://github.com/sudohaider/research-track-1-a1.git
 ```
 
 4. Build the file using `catkin_make` in the root folder of your workspace.
